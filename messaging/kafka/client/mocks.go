@@ -17,7 +17,7 @@ package client
 import (
 	"github.com/Shopify/sarama"
 	"github.com/Shopify/sarama/mocks"
-	"github.com/bsm/sarama-cluster"
+	cluster "github.com/bsm/sarama-cluster"
 
 	"go.ligato.io/cn-infra/v2/logging/logrus"
 )
@@ -133,7 +133,23 @@ func (cl *saramaClientMock) Controller() (*sarama.Broker, error) {
 	return nil, nil
 }
 
+func (cl *saramaClientMock) RefreshController() (*sarama.Broker, error) {
+	return nil, nil
+}
+
 func (cl *saramaClientMock) Brokers() []*sarama.Broker {
+	return nil
+}
+
+func (cl *saramaClientMock) Broker(brokerID int32) (*sarama.Broker, error) {
+	return nil, nil
+}
+
+func (cl *saramaClientMock) RefreshBrokers(addrs []string) error {
+	return nil
+}
+
+func (cl *saramaClientMock) LeastLoadedBroker() *sarama.Broker {
 	return nil
 }
 
@@ -153,7 +169,15 @@ func (cl *saramaClientMock) Leader(topic string, partitionID int32) (*sarama.Bro
 	return nil, nil
 }
 
+func (cl *saramaClientMock) LeaderAndEpoch(topic string, partitionID int32) (*sarama.Broker, int32, error) {
+	return nil, 0, nil
+}
+
 func (cl *saramaClientMock) Replicas(topic string, partitionID int32) ([]int32, error) {
+	return nil, nil
+}
+
+func (cl *saramaClientMock) OfflineReplicas(topic string, partitionID int32) ([]int32, error) {
 	return nil, nil
 }
 
@@ -170,6 +194,14 @@ func (cl *saramaClientMock) Coordinator(consumerGroup string) (*sarama.Broker, e
 }
 
 func (cl *saramaClientMock) RefreshCoordinator(consumerGroup string) error {
+	return nil
+}
+
+func (cl *saramaClientMock) TransactionCoordinator(transactionID string) (*sarama.Broker, error) {
+	return nil, nil
+}
+
+func (cl *saramaClientMock) RefreshTransactionCoordinator(transactionID string) error {
 	return nil
 }
 

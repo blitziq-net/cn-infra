@@ -37,8 +37,8 @@ func (embd *Embedded) Start(t *testing.T) {
 	cfg.Dir = dir
 	lpurl, _ := url.Parse("http://localhost:0")
 	lcurl, _ := url.Parse("http://localhost:0")
-	cfg.LPUrls = []url.URL{*lpurl}
-	cfg.LCUrls = []url.URL{*lcurl}
+	cfg.ListenPeerUrls = []url.URL{*lpurl}
+	cfg.ListenClientUrls = []url.URL{*lcurl}
 	embd.ETCD, err = embed.StartEtcd(cfg)
 	if err != nil {
 		t.Error(err)
