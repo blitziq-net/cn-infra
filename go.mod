@@ -3,7 +3,7 @@ module go.ligato.io/cn-infra/v2
 go 1.23.0
 
 require (
-	github.com/Shopify/sarama v1.38.1
+	github.com/Shopify/sarama v1.20.0
 	github.com/Songmu/prompter v0.5.1
 	github.com/alicebob/miniredis v2.5.0+incompatible
 	github.com/boltdb/bolt v1.3.2-0.20180302180052-fd01fc79c553
@@ -42,6 +42,8 @@ require (
 )
 
 require (
+	github.com/DataDog/zstd v1.5.7 // indirect
+	github.com/Shopify/toxiproxy v2.1.4+incompatible // indirect
 	github.com/alicebob/gopher-json v0.0.0-20230218143504-906a9b012302 // indirect
 	github.com/armon/go-metrics v0.5.4 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
@@ -56,6 +58,7 @@ require (
 	github.com/eapache/queue v1.1.0 // indirect
 	github.com/fatih/color v1.18.0 // indirect
 	github.com/fluent/fluent-logger-golang v1.9.0 // indirect
+	github.com/frankban/quicktest v1.14.6 // indirect
 	github.com/go-logr/logr v1.4.2 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
@@ -81,11 +84,6 @@ require (
 	github.com/hashicorp/go-version v1.7.0 // indirect
 	github.com/hashicorp/golang-lru v1.0.2 // indirect
 	github.com/hashicorp/serf v0.10.2 // indirect
-	github.com/jcmturner/aescts/v2 v2.0.0 // indirect
-	github.com/jcmturner/dnsutils/v2 v2.0.0 // indirect
-	github.com/jcmturner/gofork v1.7.6 // indirect
-	github.com/jcmturner/gokrb5/v8 v8.4.4 // indirect
-	github.com/jcmturner/rpc/v2 v2.0.3 // indirect
 	github.com/jonboulle/clockwork v0.5.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/klauspost/compress v1.18.0 // indirect
@@ -99,7 +97,7 @@ require (
 	github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822 // indirect
 	github.com/onsi/ginkgo v1.16.5 // indirect
 	github.com/philhofer/fwd v1.1.3-0.20240916144458-20a13a1f6b7c // indirect
-	github.com/pierrec/lz4/v4 v4.1.22 // indirect
+	github.com/pierrec/lz4 v2.6.1+incompatible // indirect
 	github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 // indirect
 	github.com/prometheus/client_model v0.6.1 // indirect
 	github.com/prometheus/common v0.63.0 // indirect
